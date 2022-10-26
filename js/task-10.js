@@ -36,3 +36,19 @@ function destroyBoxes(event) {
   inputEl.value = '';
 }
 
+function createBoxes(amount) {
+  const elements = [];
+  let initialBoxSize = 30;
+
+  for (let i = 0; i < amount; i += 1) {
+    const element = document.createElement('div');
+    initialBoxSize += 10;
+
+    element.style.width = `${initialBoxSize}px`;
+    element.style.height = `${initialBoxSize}px`;
+    element.style.backgroundColor = getRandomHexColor();
+
+    elements.push(element);
+  }
+  return elements;
+}
