@@ -3,10 +3,29 @@ const outputEl = document.querySelector('#name-output');
 
 inputEl.addEventListener('input', onTextInput);
 
-function onTextInput(event) {
-    if (event.currentTarget.value === '') {
-        outputEl.textContent = 'Anonymous';
-    }
-    outputEl.textContent = event.currentTarget.value;
+// function onTextInput(event) {
+//     if (event.currentTarget.value === '') {
+//         outputEl.textContent = 'Anonymous';
+//     } else {
 
+//         outputEl.textContent = event.currentTarget.value;
+//     }
+
+// }
+
+// function onTextInput(event) {
+//     outputEl.textContent = event.currentTarget.value;
+
+//     if (event.currentTarget.value === '') {
+//         outputEl.textContent = 'Anonymous';
+//     }
+// }
+
+
+function onTextInput(event) {
+    
+    event.currentTarget.value ?
+        outputEl.textContent = event.currentTarget.value :
+        outputEl.textContent = 'Anonymous';
+    
 }

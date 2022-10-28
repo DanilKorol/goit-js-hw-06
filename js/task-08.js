@@ -23,8 +23,8 @@ function onFormSubmit(event) {
         formElements.password.value === '') {
      
         alert("All fields has to be filled in!")
-    }
-
+    } else {
+            
     const email = formElements.email.value;
     const password = formElements.password.value;
 
@@ -35,4 +35,7 @@ function onFormSubmit(event) {
     console.log(formData);
 
     event.currentTarget.reset();
+    }
+
+   
 }
